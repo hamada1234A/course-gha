@@ -10,7 +10,7 @@ jobs:
       - name: issue-comment-with-comunity-comment
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: ${{ github.event.issue.nubmer }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             this is a test
   
