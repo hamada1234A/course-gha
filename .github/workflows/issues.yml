@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: issue-comment-with-API
-        uses: actions4gh/setup-gh@v1
+        uses: dev-hanz-ops/install-gh-cli-action@v0.1.0
       - run: |
             gh api -X POST \
             http://api.github.com/repo/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
