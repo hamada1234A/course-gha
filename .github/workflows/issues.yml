@@ -1,0 +1,16 @@
+name: issue triger
+
+on:
+  issues:
+    types: [opened]
+jobs:
+  issue-comment: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: issue-comment-with-comunity-comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.nubmer }}
+          body: |
+            this is a test
+  
